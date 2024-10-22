@@ -70,4 +70,9 @@ public class ProductsController {
 	public DataResult<List<ProductWithCategoryDto>> getProductWithCategoryDetails() {
 		return this.productService.getProductWithCategoryDetails();
 	}
+
+	@GetMapping("/getByProductId")
+	public DataResult<Product> getByProductId(@RequestParam int productId) {
+		return this.productService.getByProductId(productId);
+	}
 }
